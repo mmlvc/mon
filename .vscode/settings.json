@@ -10,5 +10,6 @@
   },
   "editor.autoClosingQuotes": "always",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "cSpell.words": ["bybit"]
 }

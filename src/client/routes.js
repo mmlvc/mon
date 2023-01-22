@@ -1,10 +1,7 @@
 import { lazy } from 'react';
-import { loadData as loadDataForUserList } from './pages/UserList';
-import { loadData as loadDataForUserInfo } from './pages/UserInfo';
 
 const Navigate = lazy(() => import('react-router-dom').then(({ Navigate: m }) => ({ default: m })));
-const UserList = lazy(() => import('./pages/UserList'));
-const UserInfo = lazy(() => import('./pages/UserInfo'));
+const Home = lazy(() => import('./pages/Home'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const routes = [
@@ -15,14 +12,9 @@ const routes = [
   },
   {
     path: '/home',
-    element: UserList,
-    loadData: loadDataForUserList,
+    element: Home,
   },
-  {
-    path: '/user-info/:id',
-    element: UserInfo,
-    loadData: loadDataForUserInfo,
-  },
+
   {
     path: '*',
     element: NotFound,
