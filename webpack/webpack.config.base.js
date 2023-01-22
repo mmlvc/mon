@@ -63,8 +63,7 @@ const getPlugins = (isWeb) => {
       ],
     }),
     new HtmlWebpackPlugin({
-      hash: true,
-      filename: '../out/index.html',
+      filename: './index.html',
     }),
   ];
 
