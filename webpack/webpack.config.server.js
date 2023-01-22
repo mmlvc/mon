@@ -35,9 +35,9 @@ module.exports = merge(baseConfig(false), {
   },
   node: { __dirname: true, __filename: true },
   externals: [
-    nodeExternals({
-      allowlist: [/\.(?!(?:jsx?|json)$).{1,5}$/i],
-    }),
+    // nodeExternals({
+    //   allowlist: [/\.(?!(?:jsx?|json)$).{1,5}$/i],
+    // }),
   ],
   plugins: [new SpawnWebpackPlugin('npm', ['start'], { dev: _isDev })],
 });
