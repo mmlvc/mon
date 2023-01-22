@@ -8,6 +8,7 @@ const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { DotenvWebpackPlugin, loadEnv } = require('./plugins/dotenv-webpack-plugin');
 
@@ -60,6 +61,10 @@ const getPlugins = (isWeb) => {
         '!icon-*.png',
         '!site.webmanifest',
       ],
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      filename: '../out/index.html',
     }),
   ];
 
