@@ -8,7 +8,6 @@ export const loadData = () => [getUserListIfNeed()];
 const Home = () => {
   const [usdtTakerBybit, setUsdtTakerBybit] = useState('0');
   useEffect(async () => {
-    console.log('here');
     const price = (await request.get('health')).data.data;
     console.log('price: ', price);
     setUsdtTakerBybit(price.usdtTakerBybit);
